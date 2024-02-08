@@ -1,0 +1,106 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.sidebar-container{
+    width: 20%;
+    background-color: #FAFAFA;
+    min-height: 100vh;
+}
+.responsive-logo,.menu-icon{
+    display: none;
+}
+
+.open-full-sidebar{
+    display: flex !important;
+    width: 100vw !important;
+    position: fixed;
+    z-index: 1000;
+    justify-content: center;
+}
+
+@media (min-width : 1151px){
+    .sidebar-names,.company-logo{
+        display: unset !important;
+    }
+    .responsive-logo{
+       display: none !important;
+    }
+}
+
+@media (max-width : 1150px) {
+    .sidebar-container{
+        width: 10%;
+    }
+    .sidebar-names{
+        display: none;
+    }
+    .company-logo{
+        display: none;
+    }
+    .responsive-logo,.menu-icon{
+        display: flex;
+    }
+    .each-sidebar-section{
+        display: flex !important;
+        justify-content: center ;
+    }
+    
+    .upper-stats{
+       width: 100%;
+    }
+    .company-stats{
+        flex-direction: column;
+    }
+    .activity-schedule-box{
+        display: flex;
+        gap: 16px;
+        padding-bottom: 20px;
+    }
+    .recent-activity-card{
+        margin-top: 20px;
+        width: 40%;
+        height: 320px;
+    }
+    .recent-activity-card .bottom-one{
+        display: block;
+    }
+    .recent-activity-card button{
+        margin-top: 20px;
+    }
+    .schedule-card{
+        flex-grow: 1;
+    }
+    .avatar-name{
+        display: none;
+    }
+
+}
+
+
+
+@media (max-width : 530px) {
+    .upper-stats{
+        display: flex;
+        flex-direction: column;
+    }
+    .recent-activity-card{
+    width: 100%;
+    }
+    .activity-schedule-box{
+        flex-direction: column;
+        
+    }
+    .sidebar-container{
+        display: none;
+    }
+    .search-input > input{
+        display: none;
+    }
+    .search-input > img{
+        position: static;
+        margin-left: 20px;
+    }
+}
+
